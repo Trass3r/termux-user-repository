@@ -34,7 +34,7 @@ exec_prefix=$TERMUX_PREFIX
 --with-wine-tools=$TERMUX_PKG_HOSTBUILD_DIR
 --enable-nls
 --disable-tests
---without-alsa
+--with-alsa
 --without-capi
 --without-coreaudio
 --without-cups
