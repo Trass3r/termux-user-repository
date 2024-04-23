@@ -68,7 +68,7 @@ exec_prefix=$TERMUX_PREFIX
 --without-xshape
 --without-xshm
 --without-xxf86vm
---enable-archs=i386,arm,aarch64
+--enable-archs=i386,aarch64
 "
 
 _setup_llvm_mingw_toolchain() {
