@@ -46,7 +46,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     strategy:
       matrix:
-        target_arch: [aarch64, arm, i686, x86_64]
+        target_arch: [aarch64]
       fail-fast: false
     steps:
     - name: Clone repository
