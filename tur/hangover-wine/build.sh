@@ -32,7 +32,7 @@ TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 enable_wineandroid_drv=no
 exec_prefix=$TERMUX_PREFIX
 --with-wine-tools=$TERMUX_PKG_HOSTBUILD_DIR
---enable-nls
+--disable-nls
 --disable-tests
 --with-alsa
 --without-capi
