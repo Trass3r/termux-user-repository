@@ -31,8 +31,6 @@ TERMUX_PKG_BLACKLISTED_ARCHES="arm, i686, x86_64"
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 enable_wineandroid_drv=no
 exec_prefix=$TERMUX_PREFIX
-CFLAGS=-flto
-CROSSCFLAGS=-flto
 --with-wine-tools=$TERMUX_PKG_HOSTBUILD_DIR
 --disable-nls
 --disable-tests
@@ -113,6 +111,7 @@ termux_step_pre_configure() {
 	# Setup llvm-mingw toolchain
 	_setup_llvm_mingw_toolchain
 
+        set -x
 	# Fix overoptimization
 	CPPFLAGS="${CPPFLAGS/-Oz/}"
 	CFLAGS="${CFLAGS/-Oz/}"
@@ -124,6 +123,8 @@ termux_step_pre_configure() {
 	CXXFLAGS="${CXXFLAGS/-fstack-protector-strong/}"
 	LDFLAGS="${LDFLAGS/-Wl,-z,relro,-z,now/}"
 
+        CFLAGS+=" -flto"
+        CROSSCFLAGS+=" -flto"
 	LDFLAGS+=" -landroid-spawn"
 }
 
