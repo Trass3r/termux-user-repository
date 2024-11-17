@@ -31,8 +31,8 @@ TERMUX_PKG_BLACKLISTED_ARCHES="arm, i686, x86_64"
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 enable_wineandroid_drv=no
 exec_prefix=$TERMUX_PREFIX
-CFLAGS="-flto"
-CROSSCFLAGS="-flto"
+CFLAGS=-flto
+CROSSCFLAGS=-flto
 --with-wine-tools=$TERMUX_PKG_HOSTBUILD_DIR
 --disable-nls
 --disable-tests
@@ -128,11 +128,11 @@ termux_step_pre_configure() {
 }
 
 termux_step_make() {
-	make -j $TERMUX_PKG_MAKE_PROCESSES
+	make -j $TERMUX_PKG_MAKE_PROCESSES -k
 }
 
 termux_step_make_install() {
-	make -j $TERMUX_PKG_MAKE_PROCESSES install
+	make -j $TERMUX_PKG_MAKE_PROCESSES -k install
 }
 
 termux_step_post_make_install() {
