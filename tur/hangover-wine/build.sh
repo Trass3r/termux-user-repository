@@ -128,6 +128,10 @@ termux_step_pre_configure() {
 	LDFLAGS+=" -landroid-spawn"
 }
 
+termux_step_configure_autotools_failure_hook() {
+	cat config.log
+}
+
 termux_step_make() {
 	make -j $TERMUX_PKG_MAKE_PROCESSES -k
 }
