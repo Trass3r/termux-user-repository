@@ -123,8 +123,8 @@ termux_step_pre_configure() {
 	CXXFLAGS="${CXXFLAGS/-fstack-protector-strong/}"
 	LDFLAGS="${LDFLAGS/-Wl,-z,relro,-z,now/}"
 
-	CFLAGS+=" -flto"
-	CROSSCFLAGS+=" -flto"
+	export CFLAGS+=" -flto"
+	export CROSSCFLAGS+=" -flto"
 	LDFLAGS+=" -landroid-spawn"
 }
 
