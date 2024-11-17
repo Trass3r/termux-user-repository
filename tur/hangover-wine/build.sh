@@ -111,7 +111,7 @@ termux_step_pre_configure() {
 	# Setup llvm-mingw toolchain
 	_setup_llvm_mingw_toolchain
 
-        set -x
+	set -x
 	# Fix overoptimization
 	CPPFLAGS="${CPPFLAGS/-Oz/}"
 	CFLAGS="${CFLAGS/-Oz/}"
