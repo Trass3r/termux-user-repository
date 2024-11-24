@@ -3,8 +3,8 @@ TERMUX_PKG_DESCRIPTION="A compatibility layer for running Windows programs (Hang
 TERMUX_PKG_LICENSE="LGPL-2.1"
 TERMUX_PKG_LICENSE_FILE="LICENSE, LICENSE.OLD, COPYING.LIB"
 TERMUX_PKG_MAINTAINER="@termux-user-repository"
-TERMUX_PKG_VERSION=9.20
-TERMUX_PKG_REVISION=2
+TERMUX_PKG_VERSION=9.22
+TERMUX_PKG_REVISION=0
 TERMUX_PKG_SRCURL=(
 	https://github.com/AndreRH/wine/archive/refs/tags/hangover-$TERMUX_PKG_VERSION.tar.gz
 	https://github.com/AndreRH/hangover/releases/download/hangover-$TERMUX_PKG_VERSION/hangover_${TERMUX_PKG_VERSION}_ubuntu2004_focal_arm64.tar
